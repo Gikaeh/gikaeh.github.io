@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects · Gino Nicosia</title>
+    <meta name="description" content="Selected projects by Gino Nicosia – software engineer and ML generalist.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">GN</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <p class="section-intro" style="color: var(--text-light); max-width: 600px; margin-bottom: 0;">
+                    A mix of deep‑learning research, full‑stack applications, and data‑driven tools. 
+                    Click the links for code and papers.
+                </p>
+
+                <!-- Filter buttons -->
+                <div class="filter-bar" id="filterBar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ml">ML & Data</button>
+                    <button class="filter-btn" data-filter="fullstack">Full‑Stack</button>
+                    <button class="filter-btn" data-filter="research">Research & Tools</button>
+                </div>
+
+                <div class="project-grid" id="projectGrid">
+                    <!-- Audio Forensics (research + tool) -->
+                    <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-wave-square"></i></div>
+                        <h3>Audio Forensics & Tampering Detection</h3>
+                        <p>Automated tool that combines metadata analysis and deep learning to detect tampered audio files (~81% accuracy).</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Digital Forensics</span>
+                            <span class="tag">Metadata Analysis</span>
+                            <span class="tag">YAMNet</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/Audio-File-Metadata-Forensics" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/Gikaeh/Audio-File-Metadata-Forensics/blob/main/automated_audio_file_authentication.pdf" target="_blank" rel="noopener">Paper <i class="fa-solid fa-file-pdf"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Cooking Assistant - Hackathon -->
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-icon"><i class="fa-solid fa-carrot"></i></div>
+                        <h3>Cooking Assistant (Hackathon)</h3>
+                        <p>AI-powered cooking assistant that provides step-by-step guidance and recipe suggestions through ingredient photo analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">GPT-4</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">SDK Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/cooking-assistant" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Gap-Filling Generative Audio -->
+                    <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-music"></i></div>
+                        <h3>Gap‑Filling Generative Audio</h3>
+                        <p>Generative audio model that fills gaps in speech audio using transformer-based architecture. Built with Python and PyTorch.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Audio Processing</span>
+                            <span class="tag">WaveNet</span>
+                            <span class="tag">Librosa</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/gap-filling-generative-audio" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- LiDAR Person Detection (robotics/healthcare) -->
+                    <!-- <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>LiDAR‑Only Person Detection</h3>
+                        <p>Real‑time 3D pedestrian detection using PointPillars and Velodyne LiDAR, aimed at safer human‑robot interaction in healthcare and hospitality.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">ROS</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <span style="color: var(--text-light); font-size:0.9rem;">Code available soon</span>
+                        </div>
+                    </article> -->
+
+                    <!-- Music Player for Smart Glasses -->
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-icon"><i class="fa-solid fa-glasses"></i></div>
+                        <h3>Music Player for Mentra OS</h3>
+                        <p>Smart‑glasses app with Spotify & Shazam integration, voice commands, and heads‑up display. Built with TypeScript, Express, and PostgreSQL.</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">OAuth 2.0</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Web Hosting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/Music-Player-for-AugmentOS" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Perturbation Driven Generalization Research -->
+                    <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+                        <h3>Perturbation Driven Generalization Research</h3>
+                        <p>Research on how controlled perturbations in training data can impact model generalization and robustness.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Data Augmentation</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Experimental Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/Perturbation-Driven-Generalizaion" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/Gikaeh/Perturbation-Driven-Generalizaion/blob/main/Perturbation%20Driven%20Generalization%20Evaluating%20the%20Impact%20of%20Data%20Augmentation%20Strategies%20Across%20Model%20Architectures.pdf" target="_blank" rel="noopener">Paper <i class="fa-solid fa-file-pdf"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Sports Analytics -->
+                    <article class="project-card" data-category="ml fullstack">
+                        <div class="project-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+                        <h3>Predictive Sports Analytics</h3>
+                        <p>Multi‑sport outcome prediction system (NBA, NHL, MLB) with automated pipelines, XGBoost models, and Kelly‑criterion decision logic.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Sports Analytics</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/SportsRLAgent" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- RL Tokenizer -->
+                    <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-language"></i></div>
+                        <h3>Reinforcement Learning Tokenizer</h3>
+                        <p>Reinforcement Learning PPO based tokenization framework with Transformer policy network; evaluated on word similarity and downstream BERT tasks.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Transformer</span>
+                            <span class="tag">Tokenization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Gikaeh/RL_Tokenizer" target="_blank" rel="noopener">Code <i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/Gikaeh/RL_Tokenizer/blob/main/An_Exploration_of_Reinforcement_Learning_for_Tokenization.pdf" target="_blank" rel="noopener">Paper <i class="fa-solid fa-file-pdf"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Socially‑Aware Robot Navigation -->
+                    <article class="project-card" data-category="ml research">
+                        <div class="project-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                        <h3>Socially‑Aware Robot Navigation</h3>
+                        <p>Novel navigation policy that prevents the “freezing robot problem” using continuous crawl motion and proxemic boundaries.</p>
+                        <div class="project-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">ROS 2</span>
+                            <span class="tag">Unity</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Study Design</span>
+                        </div>
+                        <div class="project-links">
+                            <span style="color: var(--text-light); font-size:0.9rem;">Paper / Code upon request</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Gino Nicosia</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active class
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

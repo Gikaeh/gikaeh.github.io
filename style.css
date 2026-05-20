@@ -22,6 +22,15 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
 }
+html.dark {
+    --bg: #0f172a;            
+    --text: #f1f5f9;         
+    --text-light: #94a3b8;   
+    --accent: #3b82f6;       
+    --accent-hover: #60a5fa; 
+    --border: #1e293b;       
+    --card-bg: #1e293b;      
+}
 
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -29,6 +38,7 @@ body {
     background: var(--bg);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -50,11 +60,22 @@ body {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
 }
+html.dark .site-header {
+    background: rgba(15,23,42,0.9);
+    border-bottom-color: var(--border);
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 64px;
+    flex-wrap: nowrap;
 }
 .logo {
     font-weight: 700;
@@ -62,6 +83,9 @@ body {
     text-decoration: none;
     color: var(--text);
     letter-spacing: -0.5px;
+}
+html.dark .logo {
+    color: var(--text);
 }
 .nav-links {
     display: flex;
@@ -81,6 +105,31 @@ body {
 .nav-links a.active {
     color: var(--accent);
     background: #f0f4ff;
+}
+html.dark .nav-links a:hover,
+html.dark .nav-links a.active {
+    background: #1e293b;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+}
+.theme-toggle:hover {
+    color: var(--accent);
+    background: #f0f4ff;
+    border-radius: 50%;
+}
+html.dark .theme-toggle:hover {
+    background: #1e293b;
 }
 
 /* Hamburger */
@@ -432,6 +481,9 @@ h2 {
     .nav-links a {
         padding: 10px 16px;
         border-radius: 8px;
+    }
+    .theme-toggle {
+        margin-left: 8px;
     }
     .hero {
         padding: 100px 0 70px;
